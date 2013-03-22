@@ -57,7 +57,6 @@ function initialize_overlay(element) {
 }
 
 function overlay_under_mouse(overlay, mouse_x, mouse_y, parent_offset) {
-  // Event occurs on .overlay-over object
   set_overlay_position(
     overlay,
     mouse_x - parent_offset.left - overlay.width() / 2,
@@ -65,8 +64,7 @@ function overlay_under_mouse(overlay, mouse_x, mouse_y, parent_offset) {
   );
 }
 
-// Moves `element' while moving the background counter to
-// its new position.
+// Moves `overlay' to (left, top) while moving the background counter to its new position.
 function set_overlay_position(overlay, left, top) {
   overlay.css({
     left: left,
