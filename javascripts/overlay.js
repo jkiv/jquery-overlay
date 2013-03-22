@@ -14,6 +14,11 @@ function initialize_overlay(element) {
   $('.overlay-window', element).css({
     'background-image': 'url('+ ($('img.overlay:first', element).attr('src')) + ')'
   });
+        
+  // HACK - resize conatiner to main image (because I don't know CSS)
+  $(element).css({
+    'height': $('img:not(.overlay)', element).height()
+  });
   
   // Listen for mouse over
   $(element).hover(
