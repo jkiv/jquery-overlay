@@ -1,0 +1,31 @@
+/** Appearance **/
+.overlay-container .overlay-window {
+  height: 120px;
+  width: 120px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.7);
+}
+
+/** Functional **/
+.overlay-container {
+  display: inline-block;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay-container img {
+  padding: 0;
+  margin: 0;
+}
+
+.overlay-container img.overlay {
+  display: none;
+}
+
+.overlay-container .overlay-window {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: none;
+}
