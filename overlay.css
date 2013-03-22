@@ -12,6 +12,8 @@
   padding: 0;
   overflow: hidden;
   position: relative;
+  font-size: 0;
+  text-height: 0;
 }
 
 .overlay-container img {
