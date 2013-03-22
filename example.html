@@ -2,17 +2,26 @@
 <html>
   <head>
     <title>overlay.js example</title>
+    <link rel="stylesheet" type="text/css" href="overlay.css" />
+    <script type="text/javascript" src="overlay.js"></script>
   </head>
   <body>
     <!--
       Put two images in a div of class `overlay-container'. The underlaid
       image doesn't require anything special. The overlaid image, however,
-      must be of class `overlay'. That's all!
+      must be of class `overlay'. That's all the HTML required!
     -->
     <div class="overlay-container">
       <img src="http://placebear.com/g/800/600" />
       <img class="overlay" src="http://placekitten.com/g/800/600" />
     </div>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Call overlay_begin() to set up all overlay-containers.
+        overlay_begin();
+      });
+    </script>
 
   </body>
 </html>
