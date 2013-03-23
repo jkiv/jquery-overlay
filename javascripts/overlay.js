@@ -12,9 +12,9 @@ function initialize_overlay(element) {
     
   // Make "hidden image" the background of the overlay
   $('.overlay-window', element).css({
-    'background-image': 'url('+ ($('img.overlay:first', element).attr('src')) + ')'
+    'background-url': 'url('+ ($('img.overlay:first', element).attr('src')) + ')'
   });
-        
+  
   // Listen for mouse over
   $(element).hover(
     // Entering element

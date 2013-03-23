@@ -13,7 +13,7 @@
   overflow: hidden;
   position: relative;
   font-size: 0;
-  text-height: 0;
+  line-height: 0;
 }
 
 .overlay-container img {
@@ -30,4 +30,5 @@
   left: 0;
   position: absolute;
   display: none;
+  background-repeat: no-repeat no-repeat;
 }
