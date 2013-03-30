@@ -9,18 +9,22 @@ function overlay_begin() {
 function initialize_overlay(element) {        
   // Create an overlay <div> to follow mouse
   $(element).append('<div class="overlay-window"></div>');
-  
-  // Make "hidden image" the background of the overlay
-  $('.overlay-window', element).css({
-    'background-image': 'url('+ ($('img.overlay:first', element).attr('src')) + ')'
-  });
-      
+
   // Listen for mouse over
   $(element).hover(
     // Entering element
     function (e) {
       var overlay = $(this).children('.overlay-window:first');
+      var overlay_img = $('img.overlay:first', element); 
+
+      // Make "hidden image" the background of the overlay
+      overlay.css({
+        'background-image': 'url(' + (overlay_img.attr('src')) + ')',
+	'background-size': overlay_img.width() + 'px ' + overlay_img.height() + 'px'
+      });
       
+      console.log(overlay_img.width() + 'px ' + overlay_img.height() + 'px');
+
       // Track overlay to mouse movement
       $(this).bind('mousemove', function (e) {
         overlay_under_mouse(overlay, e.pageX, e.pageY, $(this).offset());
