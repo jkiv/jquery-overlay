@@ -2,7 +2,6 @@
 .overlay-container .overlay-window {
   height: 120px;
   width: 120px;
-  border: 1px solid #ccc;
   border-radius: 20px;
   box-shadow: 2px 2px 2px rgba(0,0,0,0.7);
 }
