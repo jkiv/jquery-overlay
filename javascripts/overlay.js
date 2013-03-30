@@ -22,8 +22,6 @@ function initialize_overlay(element) {
         'background-image': 'url(' + (overlay_img.attr('src')) + ')',
 	'background-size': overlay_img.width() + 'px ' + overlay_img.height() + 'px'
       });
-      
-      console.log(overlay_img.width() + 'px ' + overlay_img.height() + 'px');
 
       // Track overlay to mouse movement
       $(this).bind('mousemove', function (e) {
